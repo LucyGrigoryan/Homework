@@ -7,23 +7,26 @@ function shallowCompare(a,b){
   let result=false;
     for (let key in a) {
     arr.push(key)
-  }
+  } 
   for (let key in b){
     arr1.push(key)
   }
-  if(arr.length===arr1.length){
+  if (arr.length===0){
+    result=true;
+  }
+  if(arr.length===arr1.length ){
     for (let i=0;i<arr.length;i++){
       for (let j=0;j<arr1.length;j++){
-        if(a[arr[i]]===b[arr1[j]] && arr[i]===arr1[j]){
+        if(a[arr[i]]===b[arr1[j]] && arr[i]===arr1[j] ){
           result=true
         }
       }
     }
   }
-
-  return result;
+    
+  return result; 
 }
-console.log(shallowCompare({a:"1"},{a:"1",b:"4"}));
+console.log(shallowCompare({a:"4",b:"5"},{a:"4"}));
 
 //task2
 //Determine if a word or phrase is an isogram. An isogram (also known as a non pattern word,is a word or phrase without a repeating letter.
